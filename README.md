@@ -39,7 +39,7 @@ The following prompt outlines the project requirements:
 | GET | /projects/:id/volunteers/:volunteer_id | READ | Get a page with details for a volunteer. |  |
 | POST | /projects/:id/volunteers | CREATE | Add a new volunteer to a project. |  |
 | PATCH | /projects/:id/volunteers/:volunteer_id | UPDATE | Update a volunteer and then route back to the project view. |  |
-| DELETE | /projects/:id/volunteers/:volunteer_id | DELETE | Delete a volunteer and then route back to the project view. |  |
+| PATCH | /projects/:id/volunteers/:volunteer_id | DELETE | Delete a volunteer and then route back to the project view. |  |
 
 | Action | Method | Class or Instance method? | Description |
 | ----------- | ----------- | ----------- | ----------- |
