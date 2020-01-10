@@ -39,3 +39,10 @@ patch('/projects/:id') do
   @project.update(params[:title])
   redirect to("/projects/#{params[:id]}")
 end
+
+delete('/projects/:id') do
+  @project = Project.find(params[:id].to_i)
+  @project.delete
+  @projects = Project.all
+  erb(:projects)
+end
