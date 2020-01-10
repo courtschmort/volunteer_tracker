@@ -8,4 +8,28 @@ class Volunteer
     @id = attributes.fetch(:id)
   end
 
+  def ==(volunteer_to_compare)
+    if volunteer_to_compare != nil
+      (self.name() == volunteer_to_compare.name()) && (self.project_id() == volunteer_to_compare.project_id())
+    else
+      false
+    end
+  end
+
+  def save
+    db_volunteers = DB.exec("INSERT INTO volunteers (name, project_id) VALUES ('#{@name}', #{@project_id}) RETURNING id;")
+    @id = db_volunteers.first().fetch("id").to_i
+  end
+
+  def self.find_by_project(proj_id)
+    db_volunteers = DB.exec("SELECT * FROM volunteers WHERE project_id = #{proj_id};")
+    volunteers = []
+    db_volunteers.each() do |volunteer|
+      name = volunteer.fetch('name')
+      id = volunteer.fetch('id').to_i
+      volunteers.push(Volunteer.new({:name => name, :project_id => proj_id, :id => id}))
+    end
+    volunteers
+  end
+
 end
