@@ -7,6 +7,10 @@ class Project
     @id = attributes.fetch(:id)
   end
 
+  def ==(project_to_compare)
+    self.title == project_to_compare.title
+  end
+
   def save
     db_projects = DB.exec("INSERT INTO projects (title) VALUES ('#{@title}') RETURNING id;")
     @id = db_projects.first().fetch('id').to_i
@@ -23,8 +27,15 @@ class Project
     projects
   end
 
-  def ==(project_to_compare)
-    self.title == project_to_compare.title
+  def self.find(id)
+    db_project = DB.exec("SELECT * FROM projects WHERE id = #{id};").first
+    if db_project
+      title = db_project.fetch('title')
+      id = db_project.fetch('id').to_i
+      Project.new(:title => title, :id => id)
+    else
+      nil
+    end
   end
 
 end
