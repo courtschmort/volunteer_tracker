@@ -1,0 +1,15 @@
+<div class="form-group">
+  <form action="/projects/<%= @project.id %>" method="post">
+    <div class="form-group">
+      <input name="_method" type="hidden" value="patch">
+      <label for="title">Update <%= @project.title %>:</label>
+      <input class="form-control" name="title" type="text">
+    </div>
+    <button class="btn btn-secondary" type="submit">Update Project</button>
+  </form>
+</div>
+
+<br>
+<hr>
+
+<p><a class="link" href="/projects/<%= @project.id %>">Return to Projects</a></p>
