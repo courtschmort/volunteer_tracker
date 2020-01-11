@@ -14,6 +14,8 @@ The following prompt outlines the project requirements:
 
 ## Specs
 
+Pre-written tests provided [here](https://github.com/epicodus-lessons/volunt33r_track3r).
+
 <!-- This is another way to write out specs:
 * Spec:
 * Input:
