@@ -1,0 +1,15 @@
+<h2> <%= @volunteer.name %> </h2>
+<p>is associated with <%= @volunteer.project.title %></p>
+
+<hr>
+
+<div class="form-group">
+  <form action="/projects/<%= @volunteer.project.id %>/volunteers/<%= @volunteer.id %>" method="post">
+    <div class="form-group">
+      <input name="_method" type="hidden" value="patch">
+      <label for="name">Update <%= @volunteer.name %>:</label>
+      <input class="form-control" name="name" type="text">
+    </div>
+    <button class="btn btn-secondary" type="submit">Update Volunteer</button>
+  </form>
+</div>
