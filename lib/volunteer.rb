@@ -56,4 +56,8 @@ class Volunteer
     volunteers
   end
 
+  def project
+    Project.find(self.project_id)
+  end
+
 end
