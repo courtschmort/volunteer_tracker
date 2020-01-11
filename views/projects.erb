@@ -1,5 +1,7 @@
 <h2>Current Projects</h2>
 
+<hr>
+
 <% if @projects.any? %>
   <% @projects.each do |project| %>
   <p><a href="/projects/<%= project.id %>"><%= project.title %></a></p>
@@ -10,7 +12,7 @@
 
 <form action="/projects" method="post">
   <div class="form-group">
-    <label for="title">Create a Project</label>
+    <label for="title">Enter a Project Title:</label>
     <input name="title" class="form-control" type="text">
   </div>
   <button type="submit" class="btn btn-primary">Create Project</button>
