@@ -2,7 +2,7 @@
 
 #### Database Basics Independent Project for [Epicodus](https://www.epicodus.com/); January 10, 2020
 
-<!-- Updated MONTH DAY, YEAR -->
+Updated January 17, 2020
 
 #### By Courtney Schild
 
@@ -32,16 +32,14 @@ Pre-written tests provided [here](https://github.com/epicodus-lessons/volunt33r_
 | HTTP verb | Route | CRUD Action | Description | URL |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | GET | /projects | READ | Get a list of projects. |  |
-| GET | /projects/add | READ | Get a page with a form for adding a new project to the list. |  |
 | GET | /projects/:id | READ | Get a page with details for a project. |  |
 | GET | /projects/:id/update | READ | Get a page with a form for updating a project. |  |
 | POST | /projects | CREATE | Add a new project to the list of projects. |  |
 | PATCH | /projects/:id | UPDATE | Update a project. |  |
 | PATCH | /projects/:id | DELETE | Delete a project (or projects) from the list. |  |
 | GET | /projects/:id/volunteers/:volunteer_id | READ | Get a page with details for a volunteer. |  |
-| POST | /projects/:id/volunteers | CREATE | Add a new volunteer to a project. |  |
+| POST | /projects/:id | CREATE | Add a new volunteer to a project. |  |
 | PATCH | /projects/:id/volunteers/:volunteer_id | UPDATE | Update a volunteer and then route back to the project view. |  |
-| PATCH | /projects/:id/volunteers/:volunteer_id | DELETE | Delete a volunteer and then route back to the project view. |  |
 
 | Action | Method | Class or Instance method? | Description |
 | ----------- | ----------- | ----------- | ----------- |
@@ -55,7 +53,7 @@ Pre-written tests provided [here](https://github.com/epicodus-lessons/volunt33r_
 
 This application is deployed to Heroku and may be viewed by clicking the link below or edited by following the instructions below to clone or download the repository to your computer.
 
-**Click [here]() to open the Heroku app.**
+**Click [here](https://rocky-brushlands-84044.herokuapp.com) to open the Heroku app.**
 
 #### Cloning
 
@@ -81,15 +79,17 @@ For more information about cloning repositories available on GitHub, click [here
 
 #### Postgres
 
-TBD
+6. Complete the following lesson at [learnhowtoprogram.com](https://www.learnhowtoprogram.com/) to install Postgres:
+  * [Installing Postgres](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/installing-postgres-b34be9fd-381b-472e-bdb2-5c5c3f572b16)
 
 #### SQL
 
-TBD
+7. To access the Postgres server, type `postgres` after the command prompt.
+8. Open another terminal window or tab (**command-T** to open a new tab) and type `psql` after the command prompt.
 
 #### Heroku
 
-6. Complete the following lesson at [learnhowtoprogram.com](https://www.learnhowtoprogram.com/) to deploy to Heroku:
+9. Complete the following lesson at [learnhowtoprogram.com](https://www.learnhowtoprogram.com/) to deploy to Heroku:
   * [Deploy to Heroku](https://www.learnhowtoprogram.com/ruby-and-rails/routing-with-ruby/deploy-to-heroku)
 
 ## Known Bugs
