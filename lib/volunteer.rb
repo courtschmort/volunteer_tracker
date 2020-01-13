@@ -57,10 +57,10 @@ class Volunteer
   end
 
   def update(name, project_id)
-      @name = name
-      @project_id = project_id
-      DB.exec("UPDATE volunteers SET name = '#{@name}', project_id = #{@project_id} WHERE id = #{@id};")
-    end
+    @name = name
+    @project_id = project_id
+    DB.exec("UPDATE volunteers SET name = '#{@name}', project_id = #{@project_id} WHERE id = #{@id};")
+  end
 
   def project
     Project.find(self.project_id)
